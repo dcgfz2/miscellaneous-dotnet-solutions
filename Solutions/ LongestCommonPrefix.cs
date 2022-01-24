@@ -26,5 +26,9 @@ public static class LongestCommonPrefix {
         }
         return strs[0];
     }
+
+    public static string Example(){
+        return "[\"flower\",\"flow\",\"flight\"]";
+    }
 }
 };
