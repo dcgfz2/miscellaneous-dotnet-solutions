@@ -10,10 +10,10 @@ If there is no common prefix, return an empty string "".
 // 0 <= strs[i].length <= 200
 // strs[i] consists of only lower-case English letters.
 
-namespace Solutions;
+namespace Solutions{
 
-public class LongestCommonPrefix {
-    public string Solve(string[] strs) {
+public static class LongestCommonPrefix {
+    public static string Solve(string[] strs) {
         if (strs.Length == 0) return "";
         
         for(int i = 0; i < strs[0].Length; i++){
@@ -27,3 +27,4 @@ public class LongestCommonPrefix {
         return strs[0];
     }
 }
+};
