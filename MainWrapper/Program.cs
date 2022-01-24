@@ -10,6 +10,7 @@ class Program{
 
         switch(Console.ReadLine()){
             case "1":
+                Console.WriteLine("Example Input:" + LongestCommonPrefix.Example());
                 Console.WriteLine(LongestCommonPrefix.Solve(TakeStringArray()));
                 break;
             default:
@@ -28,7 +29,7 @@ class Program{
 
         Console.WriteLine("Enter words:");
         array = new string[size];
-        
+
         for(int i = 0; i < size; i++){
           array[i] = Console.ReadLine();
         }
