@@ -9,6 +9,8 @@ https://en.wikipedia.org/wiki/Pascal's_triangle
 //1 <= numRows <= 30
 
 using System.Collections.Generic;
+
+namespace Solutions{
 public static class PascalsTriangle {
     public static IList<IList<int>> Solve(int numRows) {
         IList<IList<int>> pascal = new List<IList<int>>();
@@ -35,4 +37,5 @@ public static class PascalsTriangle {
         return "5";
     }
     
+}
 }
