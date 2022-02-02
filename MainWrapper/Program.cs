@@ -8,15 +8,20 @@ class Program{
         Console.WriteLine("Choose an option:");
         Console.WriteLine("1) Longest Common Prefix");
         Console.WriteLine("2) Pascal's Triangle");
+        Console.WriteLine("3) Binary Search");
 
         switch(Console.ReadLine()){
             case "1":
                 Console.WriteLine("Example Input: " + LongestCommonPrefix.Example());
-                Console.WriteLine(LongestCommonPrefix.Solve(TakeStringArray()));
+                Console.WriteLine(LongestCommonPrefix.Solve(TakeArray<string>()));
                 break;
             case "2":
                 Console.WriteLine("Example Input: " + PascalsTriangle.Example());
                 Console.WriteLine(DisplayNestedList(PascalsTriangle.Solve(TakeInt())));
+                break;
+            case "3":
+                Console.WriteLine("Example Input: " + BinarySearch.Example());
+                Console.WriteLine(BinarySearch.Solve(TakeArray<int>(),TakeInt()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
@@ -24,19 +29,20 @@ class Program{
         }
     }
 
-    private static string[] TakeStringArray(){
+    private static T[] TakeArray<T>(){
         int size;
-        string[] array;
+       T[] array;
 
-        Console.WriteLine("How many words?:");//Limit 200
+        Console.WriteLine("How many items?:");//Limit 200
         size = int.Parse(Console.ReadLine());
+        if(size < 0) size = 0;
         if(size > 200) size = 200;
 
-        Console.WriteLine("Enter words:");
-        array = new string[size];
+        Console.WriteLine("Enter items:");
+        array = new T[size];
 
         for(int i = 0; i < size; i++){
-          array[i] = Console.ReadLine();
+          array[i] = (T)Convert.ChangeType(Console.ReadLine(),typeof(T));
         }
          return array;
     }
