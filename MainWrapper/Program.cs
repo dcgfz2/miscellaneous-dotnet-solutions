@@ -9,6 +9,7 @@ class Program{
         Console.WriteLine("1) Longest Common Prefix");
         Console.WriteLine("2) Pascal's Triangle");
         Console.WriteLine("3) Binary Search");
+        Console.WriteLine("4) Two Sum");
 
         switch(Console.ReadLine()){
             case "1":
@@ -22,6 +23,12 @@ class Program{
             case "3":
                 Console.WriteLine("Example Input: " + BinarySearch.Example());
                 Console.WriteLine(BinarySearch.Solve(TakeArray<int>(),TakeInt()));
+                break;
+            case "4":
+                Console.WriteLine("Example Input: " + TwoSum.Example());
+                foreach(var index in TwoSum.Solve(TakeArray<int>(),TakeInt())){
+                    Console.WriteLine("Index of value: " + index);
+                }
                 break;
             default:
                 Console.WriteLine("Not a valid option");
