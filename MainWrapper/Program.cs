@@ -10,6 +10,7 @@ class Program{
         Console.WriteLine("2) Pascal's Triangle");
         Console.WriteLine("3) Binary Search");
         Console.WriteLine("4) Two Sum");
+        Console.WriteLine("5) Climbing Stairs");
 
         switch(Console.ReadLine()){
             case "1":
@@ -29,6 +30,10 @@ class Program{
                 foreach(var index in TwoSum.Solve(TakeArray<int>(),TakeInt())){
                     Console.WriteLine("Index of value: " + index);
                 }
+                break;
+            case "5":
+                Console.WriteLine("Example Input: " + ClimbingStairs.Example());
+                Console.WriteLine(ClimbingStairs.Solve(TakeInt()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
