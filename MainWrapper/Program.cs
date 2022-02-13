@@ -11,6 +11,7 @@ class Program{
         Console.WriteLine("3) Binary Search");
         Console.WriteLine("4) Two Sum");
         Console.WriteLine("5) Climbing Stairs");
+        Console.WriteLine("6) Fibonacci");
 
         switch(Console.ReadLine()){
             case "1":
@@ -34,6 +35,10 @@ class Program{
             case "5":
                 Console.WriteLine("Example Input: " + ClimbingStairs.Example());
                 Console.WriteLine(ClimbingStairs.Solve(TakeInt()));
+                break;
+            case "6":
+                Console.WriteLine("Example Input: " + Fibonacci.Example());
+                Console.WriteLine(Fibonacci.Solve(TakeInt()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
