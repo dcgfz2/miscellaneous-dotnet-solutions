@@ -12,6 +12,8 @@ class Program{
         Console.WriteLine("4) Two Sum");
         Console.WriteLine("5) Climbing Stairs");
         Console.WriteLine("6) Fibonacci");
+        Console.WriteLine("7) Best Sightseeing Pair");
+
 
         switch(Console.ReadLine()){
             case "1":
@@ -39,6 +41,10 @@ class Program{
             case "6":
                 Console.WriteLine("Example Input: " + Fibonacci.Example());
                 Console.WriteLine(Fibonacci.Solve(TakeInt()));
+                break;
+            case "7":
+                Console.WriteLine("Example Input: " + BestSightseeingPair.Example());
+                Console.WriteLine(BestSightseeingPair.Solve(TakeArray<int>()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
