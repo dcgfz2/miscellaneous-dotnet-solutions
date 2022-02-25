@@ -49,8 +49,8 @@ class Program{
                 Console.WriteLine(BestSightseeingPair.Solve(TakeArray<int>()));
                 break;
             case "8":
-                //Console.WriteLine("Example Input: " + HouseRobber.Example());
-                //Console.WriteLine(HouseRobber.Solve(TakeArray<int>()));
+                Console.WriteLine("Example Input: " + HouseRobber.Example());
+                Console.WriteLine(HouseRobber.Solve(TakeArray<int>()));
                 break;
             case "9":
                 Console.WriteLine("Example Input: " + CoinChange.Example());
