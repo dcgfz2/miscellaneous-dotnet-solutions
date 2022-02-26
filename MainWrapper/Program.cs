@@ -15,6 +15,7 @@ class Program{
         Console.WriteLine("7) Best Sightseeing Pair");
         Console.WriteLine("8) House Robber");
         Console.WriteLine("9) Coin Change");
+        Console.WriteLine("10) Unique Paths");
 
 
         switch(Console.ReadLine()){
@@ -55,6 +56,10 @@ class Program{
             case "9":
                 Console.WriteLine("Example Input: " + CoinChange.Example());
                 Console.WriteLine(CoinChange.Solve(TakeArray<int>(),TakeInt()));
+                break;
+            case "10":
+                Console.WriteLine("Example Input: " + UniquePaths.Example());
+                Console.WriteLine(UniquePaths.Solve(TakeInt(),TakeInt()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
