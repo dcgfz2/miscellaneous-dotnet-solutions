@@ -108,4 +108,29 @@ class Program{
         output+=" }";
         return output;
     }
+
+    private static T[][] TakeJaggedArray<T>(){
+        int size;
+       T[][] array;
+
+        Console.WriteLine("How many arrays?:");//Limit 200
+        size = int.Parse(Console.ReadLine());
+        if(size < 0) size = 0;
+        if(size > 200) size = 200;
+
+        
+        array = new T[size][];
+
+        for(int j = 0; j < size;j++){
+            Console.WriteLine("Enter array size:");
+            int num = int.Parse(Console.ReadLine());
+            if(num < 0) num = 0;
+            array[j] = new T[num];
+            Console.WriteLine("Enter items:");
+            for(int i = 0; i < num; i++){
+            array[j][i] = (T)Convert.ChangeType(Console.ReadLine(),typeof(T));
+         }
+        }
+         return array;
+    }
 }
