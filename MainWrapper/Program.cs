@@ -10,6 +10,13 @@ class Program{
         Console.WriteLine("2) Pascal's Triangle");
         Console.WriteLine("3) Binary Search");
         Console.WriteLine("4) Two Sum");
+        Console.WriteLine("5) Climbing Stairs");
+        Console.WriteLine("6) Fibonacci");
+        Console.WriteLine("7) Best Sightseeing Pair");
+        Console.WriteLine("8) House Robber");
+        Console.WriteLine("9) Coin Change");
+        Console.WriteLine("10) Unique Paths");
+
 
         switch(Console.ReadLine()){
             case "1":
@@ -29,6 +36,30 @@ class Program{
                 foreach(var index in TwoSum.Solve(TakeArray<int>(),TakeInt())){
                     Console.WriteLine("Index of value: " + index);
                 }
+                break;
+            case "5":
+                Console.WriteLine("Example Input: " + ClimbingStairs.Example());
+                Console.WriteLine(ClimbingStairs.Solve(TakeInt()));
+                break;
+            case "6":
+                Console.WriteLine("Example Input: " + Fibonacci.Example());
+                Console.WriteLine(Fibonacci.Solve(TakeInt()));
+                break;
+            case "7":
+                Console.WriteLine("Example Input: " + BestSightseeingPair.Example());
+                Console.WriteLine(BestSightseeingPair.Solve(TakeArray<int>()));
+                break;
+            case "8":
+                Console.WriteLine("Example Input: " + HouseRobber.Example());
+                Console.WriteLine(HouseRobber.Solve(TakeArray<int>()));
+                break;
+            case "9":
+                Console.WriteLine("Example Input: " + CoinChange.Example());
+                Console.WriteLine(CoinChange.Solve(TakeArray<int>(),TakeInt()));
+                break;
+            case "10":
+                Console.WriteLine("Example Input: " + UniquePaths.Example());
+                Console.WriteLine(UniquePaths.Solve(TakeInt(),TakeInt()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
