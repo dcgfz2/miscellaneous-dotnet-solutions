@@ -18,6 +18,7 @@ class Program{
         Console.WriteLine("9) Coin Change");
         Console.WriteLine("10) Unique Paths");
         Console.WriteLine("11) Rotate Image");
+        Console.WriteLine("12) Max Depth");
 
         switch(Console.ReadLine()){
             case "1":
@@ -73,6 +74,10 @@ class Program{
                     row += "]";
                     Console.WriteLine(row);
                 };
+                break;
+            case "12":
+                Console.WriteLine("Example Input: " + MaxDepth.Example());
+                Console.WriteLine(MaxDepth.Solve(TakeBinaryTree()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
