@@ -1,5 +1,6 @@
 ﻿using System;
 using Solutions;
+using Support;
 
 class Program{
     static void Main(string[] args){
@@ -17,7 +18,6 @@ class Program{
         Console.WriteLine("9) Coin Change");
         Console.WriteLine("10) Unique Paths");
         Console.WriteLine("11) Rotate Image");
-
 
         switch(Console.ReadLine()){
             case "1":
@@ -145,5 +145,20 @@ class Program{
          }
         }
          return array;
+    }
+
+    private static TreeNode TakeBinaryTree(){
+        Console.WriteLine("Enter value of Node <leave blank for NULL/No Node>:");
+        string input = Console.ReadLine();
+        if(input == "") return null;
+
+        TreeNode root = new TreeNode(int.Parse(input));
+        Console.WriteLine("New Node: Left, Parent: " + input);
+        root.left = TakeBinaryTree();
+
+        Console.WriteLine("New Node: Right, Parent: " + input);
+        root.right = TakeBinaryTree();
+        
+        return root;
     }
 }
