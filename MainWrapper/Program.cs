@@ -87,7 +87,7 @@ class Program{
                 break;
             case "14":
                 Console.WriteLine("Example Input: " + InvertTree.Example());
-                Console.WriteLine(InvertTree.Solve(TakeBinaryTree()));
+                PrintTreeBF(InvertTree.Solve(TakeBinaryTree()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
@@ -176,4 +176,24 @@ class Program{
         
         return root;
     }
+    private static void PrintTreeBF(TreeNode root){
+        if(root == null) return;
+        Queue<TreeNode> curLevel = new Queue<TreeNode>();
+        Queue<TreeNode> nextLevel = new Queue<TreeNode>();
+        curLevel.Enqueue(root);
+
+        while(curLevel.Count > 0 || nextLevel.Count > 0){
+            String level = "";
+            while(curLevel.Count != 0){
+                TreeNode temp = curLevel.Dequeue();
+                level += temp.val + " ";
+                if(temp.left != null) nextLevel.Enqueue(temp.left);
+                if(temp.right != null)nextLevel.Enqueue(temp.right);
+            }
+            Console.WriteLine(level);
+            curLevel = nextLevel;
+            nextLevel = new Queue<TreeNode>();
+        }
+    }
+
 }
