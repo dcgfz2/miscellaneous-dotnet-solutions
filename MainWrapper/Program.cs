@@ -20,6 +20,7 @@ class Program{
         Console.WriteLine("11) Rotate Image");
         Console.WriteLine("12) Max Depth");
         Console.WriteLine("13) Same Tree");
+        Console.WriteLine("14) Invert Tree");
 
         switch(Console.ReadLine()){
             case "1":
@@ -83,6 +84,10 @@ class Program{
             case "13":
                 Console.WriteLine("Example Input: " + IsSameTree.Example());
                 Console.WriteLine(IsSameTree.Solve(TakeBinaryTree(),TakeBinaryTree()));
+                break;
+            case "14":
+                Console.WriteLine("Example Input: " + InvertTree.Example());
+                Console.WriteLine(InvertTree.Solve(TakeBinaryTree()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
