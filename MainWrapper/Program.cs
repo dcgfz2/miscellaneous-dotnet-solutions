@@ -22,6 +22,7 @@ class Program{
         Console.WriteLine("13) Same Tree");
         Console.WriteLine("14) Invert Tree");
         Console.WriteLine("15) Is Subtree");
+        Console.WriteLine("16) Lowest Common Ancestor");
 
         switch(Console.ReadLine()){
             case "1":
@@ -93,6 +94,10 @@ class Program{
             case "15":
                 Console.WriteLine("Example Input: " + IsSubtree.Example());
                 Console.WriteLine(IsSubtree.Solve(TakeBinaryTree(),TakeBinaryTree()));
+                break;
+            case "16":
+                Console.WriteLine("Example Input: " + LowestCommonAncestor.Example());
+                Console.WriteLine(LowestCommonAncestor.Solve(TakeBinaryTree(),new TreeNode(TakeInt()),new TreeNode(TakeInt())).val);
                 break;
             default:
                 Console.WriteLine("Not a valid option");
