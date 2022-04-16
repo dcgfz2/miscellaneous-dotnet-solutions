@@ -21,6 +21,7 @@ class Program{
         Console.WriteLine("12) Max Depth");
         Console.WriteLine("13) Same Tree");
         Console.WriteLine("14) Invert Tree");
+        Console.WriteLine("15) Is Subtree");
 
         switch(Console.ReadLine()){
             case "1":
@@ -88,6 +89,10 @@ class Program{
             case "14":
                 Console.WriteLine("Example Input: " + InvertTree.Example());
                 PrintTreeBF(InvertTree.Solve(TakeBinaryTree()));
+                break;
+            case "15":
+                Console.WriteLine("Example Input: " + IsSubtree.Example());
+                Console.WriteLine(IsSubtree.Solve(TakeBinaryTree(),TakeBinaryTree()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
