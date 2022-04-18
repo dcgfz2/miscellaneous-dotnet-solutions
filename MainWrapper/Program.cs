@@ -24,6 +24,7 @@ class Program{
         Console.WriteLine("15) Is Subtree");
         Console.WriteLine("16) Lowest Common Ancestor");
         Console.WriteLine("17) KthSmallest");
+        Console.WriteLine("18) Contains Duplicate");
 
         switch(Console.ReadLine()){
             case "1":
@@ -103,6 +104,10 @@ class Program{
             case "17":
                 Console.WriteLine("Example Input: " + KthSmallest.Example());
                 Console.WriteLine(KthSmallest.Solve(TakeBinaryTree(),TakeInt()));
+                break;
+            case "18":
+                Console.WriteLine("Example Input: " + ContainsDuplicate.Example());
+                Console.WriteLine(ContainsDuplicate.Solve(TakeArray<int>()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
