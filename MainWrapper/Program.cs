@@ -26,6 +26,7 @@ class Program{
         Console.WriteLine("17) KthSmallest");
         Console.WriteLine("18) Contains Duplicate");
         Console.WriteLine("19)  Maximum Product Subarray");
+        Console.WriteLine("20)  Search in Rotated Sorted Array");
 
         switch(Console.ReadLine()){
             case "1":
@@ -113,6 +114,10 @@ class Program{
             case "19":
                 Console.WriteLine("Example Input: " + MaxProduct.Example());
                 Console.WriteLine(MaxProduct.Solve(TakeArray<int>()));
+                break;
+            case "20":
+                Console.WriteLine("Example Input: " + SearchRotatedSortedArray.Example());
+                Console.WriteLine(SearchRotatedSortedArray.Solve(TakeArray<int>(),TakeInt()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
