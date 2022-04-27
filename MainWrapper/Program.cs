@@ -25,6 +25,7 @@ class Program{
         Console.WriteLine("16) Lowest Common Ancestor");
         Console.WriteLine("17) KthSmallest");
         Console.WriteLine("18) Contains Duplicate");
+        Console.WriteLine("19)  Maximum Product Subarray");
 
         switch(Console.ReadLine()){
             case "1":
@@ -108,6 +109,10 @@ class Program{
             case "18":
                 Console.WriteLine("Example Input: " + ContainsDuplicate.Example());
                 Console.WriteLine(ContainsDuplicate.Solve(TakeArray<int>()));
+                break;
+            case "19":
+                Console.WriteLine("Example Input: " + MaxProduct.Example());
+                Console.WriteLine(MaxProduct.Solve(TakeArray<int>()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
