@@ -25,8 +25,9 @@ class Program{
         Console.WriteLine("16) Lowest Common Ancestor");
         Console.WriteLine("17) KthSmallest");
         Console.WriteLine("18) Contains Duplicate");
-        Console.WriteLine("19)  Maximum Product Subarray");
-        Console.WriteLine("20)  Search in Rotated Sorted Array");
+        Console.WriteLine("19) Maximum Product Subarray");
+        Console.WriteLine("20) Search in Rotated Sorted Array");
+        Console.WriteLine("21) Find Min in Rotated Sorted Array");
 
         switch(Console.ReadLine()){
             case "1":
@@ -118,6 +119,10 @@ class Program{
             case "20":
                 Console.WriteLine("Example Input: " + SearchRotatedSortedArray.Example());
                 Console.WriteLine(SearchRotatedSortedArray.Solve(TakeArray<int>(),TakeInt()));
+                break;
+            case "21":
+                Console.WriteLine("Example Input: " + FindMinRotatedSortedArray.Example());
+                Console.WriteLine(FindMinRotatedSortedArray.Solve(TakeArray<int>()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
