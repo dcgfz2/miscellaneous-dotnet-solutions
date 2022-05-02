@@ -28,6 +28,7 @@ class Program{
         Console.WriteLine("19) Maximum Product Subarray");
         Console.WriteLine("20) Search in Rotated Sorted Array");
         Console.WriteLine("21) Find Min in Rotated Sorted Array");
+        Console.WriteLine("22) Find Max Profit");
 
         switch(Console.ReadLine()){
             case "1":
@@ -123,6 +124,10 @@ class Program{
             case "21":
                 Console.WriteLine("Example Input: " + FindMinRotatedSortedArray.Example());
                 Console.WriteLine(FindMinRotatedSortedArray.Solve(TakeArray<int>()));
+                break;
+            case "22":
+                Console.WriteLine("Example Input: " + MaxProfit.Example());
+                Console.WriteLine(MaxProfit.Solve(TakeArray<int>()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
