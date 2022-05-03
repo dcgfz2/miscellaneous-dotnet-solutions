@@ -30,6 +30,7 @@ class Program{
         Console.WriteLine("21) Find Min in Rotated Sorted Array");
         Console.WriteLine("22) Find Max Profit");
         Console.WriteLine("23) Is Valid Anagram");
+        Console.WriteLine("24) Group Anagrams");
 
         switch(Console.ReadLine()){
             case "1":
@@ -133,6 +134,18 @@ class Program{
             case "23":
                 Console.WriteLine("Example Input: " + IsAnagram.Example());
                 Console.WriteLine(IsAnagram.Solve(TakeString(),TakeString()));
+                break;
+            case "24":
+                Console.WriteLine("Example Input: " + GroupAnagrams.Example());
+                foreach(List<string> list in GroupAnagrams.Solve(TakeArray<string>())){
+                    string row = "[ ";
+                    
+                    foreach(string item in list){
+                        row += item + " ";
+                    }
+                    row += "]";
+                    Console.WriteLine(row);
+                };
                 break;
             default:
                 Console.WriteLine("Not a valid option");
