@@ -31,6 +31,7 @@ class Program{
         Console.WriteLine("22) Find Max Profit");
         Console.WriteLine("23) Is Valid Anagram");
         Console.WriteLine("24) Group Anagrams");
+        Console.WriteLine("25) Top K Frequent Elements");
 
         switch(Console.ReadLine()){
             case "1":
@@ -145,6 +146,12 @@ class Program{
                     }
                     row += "]";
                     Console.WriteLine(row);
+                };
+                break;
+            case "25":
+                Console.WriteLine("Example Input: " + TopKFrequent.Example());
+                foreach(int num in TopKFrequent.Solve(TakeArray<int>(),TakeInt())){
+                    Console.Write(num + " ");
                 };
                 break;
             default:
