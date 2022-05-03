@@ -29,6 +29,7 @@ class Program{
         Console.WriteLine("20) Search in Rotated Sorted Array");
         Console.WriteLine("21) Find Min in Rotated Sorted Array");
         Console.WriteLine("22) Find Max Profit");
+        Console.WriteLine("23) Is Valid Anagram");
 
         switch(Console.ReadLine()){
             case "1":
@@ -128,6 +129,10 @@ class Program{
             case "22":
                 Console.WriteLine("Example Input: " + MaxProfit.Example());
                 Console.WriteLine(MaxProfit.Solve(TakeArray<int>()));
+                break;
+            case "23":
+                Console.WriteLine("Example Input: " + IsAnagram.Example());
+                Console.WriteLine(IsAnagram.Solve(TakeString(),TakeString()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
