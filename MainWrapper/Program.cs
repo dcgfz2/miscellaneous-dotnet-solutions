@@ -154,8 +154,13 @@ class Program{
     }
 
     private static int TakeInt(){
-        Console.WriteLine("Enter a integer:");
+        Console.WriteLine("Enter a Integer:");
         return int.Parse(Console.ReadLine());
+    }
+
+    private static string TakeString(){
+        Console.WriteLine("Enter a String:");
+        return Console.ReadLine();
     }
 
     private static string DisplayNestedList(IList<IList<int>> lists){
