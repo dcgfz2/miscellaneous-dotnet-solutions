@@ -33,6 +33,7 @@ class Program{
         Console.WriteLine("24) Group Anagrams");
         Console.WriteLine("25) Top K Frequent Elements");
         Console.WriteLine("26) Product of Array Except Self");
+        Console.WriteLine("27) Valid Sudoku");
 
         switch(Console.ReadLine()){
             case "1":
@@ -160,6 +161,10 @@ class Program{
                 foreach(int num in ProductOfArrayExceptSelf.Solve(TakeArray<int>())){
                     Console.Write(num + " ");
                 };
+                break;
+            case "27":
+                Console.WriteLine("Example Input: " + IsValidSudoku.Example());
+                Console.WriteLine(IsValidSudoku.Solve(TakeJaggedArray<char>()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
