@@ -34,6 +34,7 @@ class Program{
         Console.WriteLine("25) Top K Frequent Elements");
         Console.WriteLine("26) Product of Array Except Self");
         Console.WriteLine("27) Valid Sudoku");
+        Console.WriteLine("28) Longest Consecutive Sequence");
 
         switch(Console.ReadLine()){
             case "1":
@@ -165,6 +166,10 @@ class Program{
             case "27":
                 Console.WriteLine("Example Input: " + IsValidSudoku.Example());
                 Console.WriteLine(IsValidSudoku.Solve(TakeJaggedArray<char>()));
+                break;
+            case "28":
+                Console.WriteLine("Example Input: " + LongestConsecutiveSequence.Example());
+                Console.WriteLine(LongestConsecutiveSequence.Solve(TakeArray<int>()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
