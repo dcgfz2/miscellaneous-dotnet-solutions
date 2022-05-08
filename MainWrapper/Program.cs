@@ -35,6 +35,7 @@ class Program{
         Console.WriteLine("26) Product of Array Except Self");
         Console.WriteLine("27) Valid Sudoku");
         Console.WriteLine("28) Longest Consecutive Sequence");
+        Console.WriteLine("29) Valid Palindrome");
 
         switch(Console.ReadLine()){
             case "1":
@@ -170,6 +171,10 @@ class Program{
             case "28":
                 Console.WriteLine("Example Input: " + LongestConsecutiveSequence.Example());
                 Console.WriteLine(LongestConsecutiveSequence.Solve(TakeArray<int>()));
+                break;
+            case "29":
+                Console.WriteLine("Example Input: " + IsPalindrome.Example());
+                Console.WriteLine(IsPalindrome.Solve(TakeString()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
