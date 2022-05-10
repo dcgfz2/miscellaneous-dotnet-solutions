@@ -37,6 +37,7 @@ class Program{
         Console.WriteLine("28) Longest Consecutive Sequence");
         Console.WriteLine("29) Valid Palindrome");
         Console.WriteLine("30) Two Sum II");
+        Console.WriteLine("31) Valid Parentheses");
 
         switch(Console.ReadLine()){
             case "1":
@@ -182,6 +183,10 @@ class Program{
                 foreach(int num in TwoSumII.Solve(TakeArray<int>(),TakeInt())){
                     Console.Write(num + " ");
                 };
+                break;
+            case "31":
+                Console.WriteLine("Example Input: " + ValidParentheses.Example());
+                Console.WriteLine(ValidParentheses.Solve(TakeString()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
