@@ -39,6 +39,7 @@ class Program{
         Console.WriteLine("30) Two Sum II");
         Console.WriteLine("31) Valid Parentheses");
         Console.WriteLine("32) Evaluate Reverse Polish Notation");
+        Console.WriteLine("33) Daily Temperatures(Next Highest Temperature)");
 
         switch(Console.ReadLine()){
             case "1":
@@ -192,6 +193,12 @@ class Program{
             case "32":
                 Console.WriteLine("Example Input: " + EvalRPN.Example());
                 Console.WriteLine(EvalRPN.Solve(TakeArray<string>()));
+                break;
+            case "33":
+                Console.WriteLine("Example Input: " + DailyTemperatures.Example());
+                foreach(int num in DailyTemperatures.Solve(TakeArray<int>())){
+                    Console.Write(num + " ");
+                };
                 break;
             default:
                 Console.WriteLine("Not a valid option");
