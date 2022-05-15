@@ -40,6 +40,7 @@ class Program{
         Console.WriteLine("31) Valid Parentheses");
         Console.WriteLine("32) Evaluate Reverse Polish Notation");
         Console.WriteLine("33) Daily Temperatures(Next Highest Temperature)");
+        Console.WriteLine("34) Longest Repeating Character Replacement");
 
         switch(Console.ReadLine()){
             case "1":
@@ -199,6 +200,10 @@ class Program{
                 foreach(int num in DailyTemperatures.Solve(TakeArray<int>())){
                     Console.Write(num + " ");
                 };
+                break;
+            case "34":
+                Console.WriteLine("Example Input: " + CharacterReplacement.Example());
+                Console.WriteLine(CharacterReplacement.Solve(TakeString(),TakeInt()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
