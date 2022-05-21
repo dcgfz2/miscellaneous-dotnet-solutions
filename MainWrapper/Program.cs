@@ -42,6 +42,7 @@ class Program{
         Console.WriteLine("33) Daily Temperatures(Next Highest Temperature)");
         Console.WriteLine("34) Longest Repeating Character Replacement");
         Console.WriteLine("35) Generate Parentheses");
+        Console.WriteLine("36) Binary Search Matrix");
 
         switch(Console.ReadLine()){
             case "1":
@@ -211,6 +212,10 @@ class Program{
                 foreach(string set in GenerateParentheses.Solve(TakeInt())){
                     Console.WriteLine(set);
                 };
+                break;
+            case "36":
+                Console.WriteLine("Example Input: " + BinarySearchMatrix.Example());
+                Console.WriteLine(BinarySearchMatrix.Solve(TakeJaggedArray<int>(),TakeInt()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
