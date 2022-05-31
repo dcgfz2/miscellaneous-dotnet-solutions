@@ -43,6 +43,7 @@ class Program{
         Console.WriteLine("34) Longest Repeating Character Replacement");
         Console.WriteLine("35) Generate Parentheses");
         Console.WriteLine("36) Binary Search Matrix");
+        Console.WriteLine("37) Reverse Linked List");
 
         switch(Console.ReadLine()){
             case "1":
@@ -216,6 +217,10 @@ class Program{
             case "36":
                 Console.WriteLine("Example Input: " + BinarySearchMatrix.Example());
                 Console.WriteLine(BinarySearchMatrix.Solve(TakeJaggedArray<int>(),TakeInt()));
+                break;
+            case "37":
+                Console.WriteLine("Example Input: " + ReverseList.Example());
+                Console.WriteLine(ReverseList.Solve());
                 break;
             default:
                 Console.WriteLine("Not a valid option");
