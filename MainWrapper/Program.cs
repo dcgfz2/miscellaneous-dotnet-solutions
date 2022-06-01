@@ -220,7 +220,7 @@ class Program{
                 break;
             case "37":
                 Console.WriteLine("Example Input: " + ReverseList.Example());
-                Console.WriteLine(ReverseList.Solve());
+                DisplayLinkedList(ReverseList.Solve(TakeLinkedList()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
@@ -254,6 +254,27 @@ class Program{
     private static string TakeString(){
         Console.WriteLine("Enter a String:");
         return Console.ReadLine();
+    }
+
+    private static ListNode TakeLinkedList(){
+        ListNode head = null;
+        ListNode end = head;
+
+        while(true){
+            Console.WriteLine("Enter a Integer or Press Enter to End The List:");
+            string input = Console.ReadLine();
+            if(input == "") break;
+
+            if(head == null){
+                head = new ListNode(int.Parse(input),null);
+                end = head;
+            }else{
+                end.next = new ListNode(int.Parse(input),null);
+                end = end.next;
+            }
+        }
+        
+        return head;
     }
 
     private static string DisplayNestedList(IList<IList<int>> lists){
@@ -334,4 +355,22 @@ class Program{
         }
     }
 
+    private static void DisplayLinkedList(ListNode head){
+        string list = "[";
+        ListNode cur = head;
+
+        while(cur != null){
+            list += cur.val.ToString();
+            if(cur.next != null){
+                list += ", ";
+            }
+            cur = cur.next;
+        }
+
+        list += "]";
+        Console.WriteLine(list);
+    }
+
 }
+
+
