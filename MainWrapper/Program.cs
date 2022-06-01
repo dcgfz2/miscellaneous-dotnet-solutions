@@ -44,6 +44,7 @@ class Program{
         Console.WriteLine("35) Generate Parentheses");
         Console.WriteLine("36) Binary Search Matrix");
         Console.WriteLine("37) Reverse Linked List");
+        Console.WriteLine("38) Linked List Cycle");
 
         switch(Console.ReadLine()){
             case "1":
@@ -221,6 +222,10 @@ class Program{
             case "37":
                 Console.WriteLine("Example Input: " + ReverseList.Example());
                 DisplayLinkedList(ReverseList.Solve(TakeLinkedList()));
+                break;
+            case "38":
+                Console.WriteLine("Example Input: " + LinkedListCycle.Example());
+                Console.WriteLine(LinkedListCycle.Solve(TakeLinkedList()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
