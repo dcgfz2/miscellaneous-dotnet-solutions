@@ -45,6 +45,7 @@ class Program{
         Console.WriteLine("36) Binary Search Matrix");
         Console.WriteLine("37) Reverse Linked List");
         Console.WriteLine("38) Linked List Cycle");
+        Console.WriteLine("39) Diameter Of Binary Tree");
 
         switch(Console.ReadLine()){
             case "1":
@@ -226,6 +227,10 @@ class Program{
             case "38":
                 Console.WriteLine("Example Input: " + LinkedListCycle.Example());
                 Console.WriteLine(LinkedListCycle.Solve(TakeLinkedList()));
+                break;
+            case "39":
+                Console.WriteLine("Example Input: " + DiameterOfBinaryTree.Example());
+                Console.WriteLine(DiameterOfBinaryTree.Solve(TakeBinaryTree()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
