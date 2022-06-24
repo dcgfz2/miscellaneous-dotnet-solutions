@@ -46,6 +46,7 @@ class Program{
         Console.WriteLine("37) Reverse Linked List");
         Console.WriteLine("38) Linked List Cycle");
         Console.WriteLine("39) Diameter Of Binary Tree");
+        Console.WriteLine("40) Add Two Numbers as Linked Lists");
 
         switch(Console.ReadLine()){
             case "1":
@@ -231,6 +232,10 @@ class Program{
             case "39":
                 Console.WriteLine("Example Input: " + DiameterOfBinaryTree.Example());
                 Console.WriteLine(DiameterOfBinaryTree.Solve(TakeBinaryTree()));
+                break;
+            case "40":
+                Console.WriteLine("Example Input: " + AddTwoNumbersList.Example());
+                DisplayLinkedList(AddTwoNumbersList.Solve(TakeLinkedList(),TakeLinkedList()));
                 break;
             default:
                 Console.WriteLine("Not a valid option");
